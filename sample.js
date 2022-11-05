@@ -1,6 +1,6 @@
 function getcat() {
     console.log("getcat");
-    let rURL = "http://aws.random.cat/meow";
+    let rURL = "https://aws.random.cat/meow";
     let r = new XMLHttpRequest();
     r.open("GET", rURL);
 
