@@ -4,18 +4,34 @@
 <head>
     <meta charset="UTF-8" />
     <title>らんだむ　ぬこ</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <!-- <link rel="stylesheet" href="style.css" /> -->
     <script type="text/javascript" src="./sample.js"></script>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous" />
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet" />
 </head>
 
-<body>
+<body class="p-3 mb-2 bg-light">
     <center>
-        <h1>らんだむぬこ生成</h1>
+        <header class="p-3 mb-2 bg-info text-white">
+            🐱🐱🐱🐱🐱🐱🐱🐱
+            <h1>らんだむぬこ <i class="fas fa-paw"></i></h1>
+            🐈🐈🐈🐈🐈🐈🐈🐈
+        </header>
         <main>
-            <button type="button" onclick="getcat()">表示する</button><br />
-            <img id="catimg" src="" />
-        </main>
+            <button type="button" onclick="getcat()" style="border-radius: 8px">
+          表示する</button
+        ><br />
+        <img
+          id="catimg"
+          src=""
+          style="max-width: 100%; height: auto; margin: 10px"
+        />
+      </main>
     </center>
-</body>
-
+  </body>
 </html>
