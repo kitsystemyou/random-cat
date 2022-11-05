@@ -1,5 +1,4 @@
 function getcat() {
-    console.log("getcat");
     let rURL = "https://aws.random.cat/meow";
     let r = new XMLHttpRequest();
     r.open("GET", rURL);
@@ -9,7 +8,6 @@ function getcat() {
     r.onload = function() {
         let jsonObj = r.response;
         let img = document.getElementById("catimg");
-        console.debug("link", jsonObj["file"]);
         img.src = jsonObj["file"];
     };
 }
