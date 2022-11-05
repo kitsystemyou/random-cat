@@ -1,7 +1,5 @@
-// Create an image in HTML with the ID "catimg"
-// document.getElementById("catimg").style.display = "none";
 function getcat() {
-    console.log("getcat")
+    console.log("getcat");
     let rURL = "http://aws.random.cat/meow";
     let r = new XMLHttpRequest();
     r.open("GET", rURL);
@@ -9,22 +7,24 @@ function getcat() {
     r.responseType = "json";
     r.send();
 
-    r.onload = function() {
-        let jsonObj1 = r.response;
-        let r2 = new XMLHttpRequest();
-        console.log("get url", jsonObj1["file"])
-        r2.open("GET", jsonObj1["file"]);
-        r2.responseType = "json";
-        r2.send();
-    }
+    // let r2 = new XMLHttpRequest();
+    // r.onload = function() {
+    //     let jsonObj1 = r.response;
+    //     console.log("get url", jsonObj1["file"]);
+    //     // r2.responseType = "json";
+    //     r2.open("GET", jsonObj1["file"]);
+    //     r2.setRequestHeader("Access-Control-Allow-Origin", "*");
+    //     // r2.setRequestHeader("Accept", "*/*");
+    //     r2.send();
+    // };
 
-    r2.onload = function() {
-        let jsonObj = r2.response;
+    r.onload = function() {
+        let jsonObj = r.response;
         let img = document.getElementById("catimg");
-        console.log(jsonObj)
+        console.log("link", jsonObj["file"]);
         img.src = jsonObj["file"];
-        img.style.display = "inline-block";
-    }
-    console.log("end getcat")
+        // img.style.display = "inline-block";
+    };
+    console.log("end getcat");
 }
-getcat();
+// getcat();
